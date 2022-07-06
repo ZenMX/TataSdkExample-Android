@@ -1,4 +1,4 @@
-# How to use mx-tata-sdk-android
+# How to integrate mx-tata-sdk-android
 
 latest version `0.1.1.0-SNAPSHOT`
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.0.2.0-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.1.1.0-SNAPSHOT'
 
 ```
 
@@ -91,3 +91,39 @@ for only test playback
 MxSDK.testPlayback(this@MainActivity)
 
 ```
+
+## Release Note
+
+### 0.1.1.0-SNAPSHOT
+
+* compatibility optimize.
+
+### 0.1.0.0-SNAPSHOT
+
+* pause\start, 
+
+* rewind forward, 
+  
+* player control lock,
+  
+* speed, subtitle,
+  
+* quality,
+  
+* audio language,
+  
+* age rating,
+  
+* skip intro, skip credit,
+  
+* auto play next,
+  
+* Next episode CTA with timer,
+  
+* back button.
+
+
+### 0.0.2.0-SNAPSHOT
+
+* support testPlayback, only can play one  movie, no other feature.
+
