@@ -7,6 +7,6 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
 
-        MxSDK.Builder(this).build()
+        MxSDK.Builder(this).debug(BuildConfig.DEBUG).verbose().build()
     }
 }
