@@ -96,9 +96,13 @@ MxSDK.testPlayback(this@MainActivity)
 
 ### 0.1.1.0-SNAPSHOT
 
+FIX:
+
 * compatibility optimize.
 
 ### 0.1.0.0-SNAPSHOT
+
+FEATURE:
 
 * pause\start, 
 
@@ -124,6 +128,8 @@ MxSDK.testPlayback(this@MainActivity)
 
 
 ### 0.0.2.0-SNAPSHOT
+
+FEATURE:
 
 * support testPlayback, only can play one  movie, no other feature.
 
