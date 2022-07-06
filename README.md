@@ -92,6 +92,97 @@ MxSDK.testPlayback(this@MainActivity)
 
 ```
 
+## MxSDK Description
+
+class MxSDK is interface that tata app interacts with MX content. 
+
+public method is following.
+
+```java
+
+public final class MxSDK {
+    /**
+     * request a PlaybackBuilder for playback
+     */
+    public static @NonNull PlaybackBuilder startPlay();
+
+    /**
+     * start a test playback immediately, only used for test.       
+     */
+    public static void testPlayback(Activity activity);
+
+    public static class Builder {
+        /**
+         * provide an extra ExecutorService, it will be used for network request,
+         * get video detail e.g.
+         * @param networkExecutor, extra ExecutorService, if not set, MxSDK will create a new one.
+         * @return this
+         */
+        public @NonNull Builder networkExecutor(@NonNull ExecutorService networkExecutor);
+
+        /**
+         * @param debug, if is true, MxSDK will access DEV API server, log is debug level.
+         * when debug is false, MxSDK will access production API server.
+         * default is false.
+         * @return this
+         */
+        public @NonNull Builder debug(boolean debug);
+            
+        /**
+         * log is verbose level. every log will be printed.
+         * @return this
+         */
+        public @NonNull Builder verbose();
+
+        /**
+         * log is silent level, nothing will be printed.
+         * @return this
+         */
+        public @NonNull Builder silent();
+
+        /**
+         * call this to finish initialize MxSDK.
+         */
+        public void build();
+    }
+
+    public static class PlaybackBuilder {
+        /**
+         * @param contentId, id of video
+         * @param contentType, type of video, 'tvshow_episode' e.g.
+         * @return this
+         */
+        public @NonNull PlaybackBuilder withContent(@NonNull String contentId, @NonNull String contentType);
+
+        /**
+         * @param token, token of user, subscribe user should give this parameter.
+         * @return this
+         */
+        public @NonNull PlaybackBuilder withToken(@Nullable String token);
+
+        /**
+         * @param userId, user id, tata app provide
+         * @return this
+         */
+        public @NonNull PlaybackBuilder withUserId(@Nullable String userId);
+
+        /**
+         * @param dsn, DSN, tata app provide
+         * @return this
+         */
+        public @NonNull PlaybackBuilder withDSN(@Nullable String dsn);
+
+        /**
+         * call this to start playback immediately after all parameters are set.      
+         */
+        public void play(@NonNull Activity context);
+    }
+}
+
+
+
+```
+
 ## Release Note
 
 ### 0.1.1.0-SNAPSHOT
