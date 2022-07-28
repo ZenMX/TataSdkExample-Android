@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.3.0.0-SNAPSHOT`
+latest version `0.4.0.0-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.3.0.0-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.4.0.0-SNAPSHOT'
 
 ```
 
@@ -66,6 +66,18 @@ override fun onCreate() {
     super.onCreate()
 
     MxSDK.Builder(this).debug(BuildConfig.DEBUG).build()
+}
+
+```
+
+if you want to test for candidate. (UAT)
+
+```kotlin
+
+override fun onCreate() {
+    super.onCreate()
+
+    MxSDK.Builder(this).debug(false).candidate(true).build()
 }
 
 ```
@@ -139,6 +151,13 @@ public final class MxSDK {
          * @return this
          */
         public @NonNull Builder silent();
+
+        /**
+         * @param candidate, true, sdk will access candidate env. otherwise, release env.
+         * if debug is true, this flag will be ignored.                  
+         * @return this
+         */
+        public @NonNull Builder candidate(boolean candidate);
 
         /**
          * call this to finish initialize MxSDK.
