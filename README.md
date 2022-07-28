@@ -204,6 +204,20 @@ public final class MxSDK {
 
 ## Release Note
 
+### 0.4.0.0-SNAPSHOT
+
+FEATURE:
+
+* support candidate env
+
+* update tracking accordingly
+
+* normalize error code
+
+FIX:
+
+* fix some initialization issue
+
 ### 0.3.0.0-SNAPSHOT
 
 FEATURE:
