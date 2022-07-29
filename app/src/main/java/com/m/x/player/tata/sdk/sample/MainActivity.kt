@@ -17,8 +17,8 @@ class MainActivity : AppCompatActivity() {
         findViewById<View>(R.id.start_1).setOnClickListener {
             MxSDK.startPlay()
                 .withContent("4694edb9f78497662881d646798d5425", "tvshow_episode")
-                .withToken("test-token")
-                .withDSN("test-DSN")
+                .withToken("oV0rikNrPjlEqouQQNVLPl6UD7HcsTXL")
+                .withDSN("004658356310")
                 .withUserId("test-user-id")
                 .play(this@MainActivity)
         }
