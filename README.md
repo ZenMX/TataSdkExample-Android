@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.4.0.0-SNAPSHOT`
+latest version `0.5.0.0-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.4.0.0-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.5.0.0-SNAPSHOT'
 
 ```
 
@@ -69,6 +69,22 @@ override fun onCreate() {
 }
 
 ```
+
+handle error
+
+```kotlin
+
+override fun onCreate() {
+    super.onCreate()
+
+    MxSDK.Builder(this).debug(BuildConfig.DEBUG).errorListener {
+        Toast.makeText(this@App, "error $it", Toast.LENGTH_SHORT).show()
+        return@errorListener true
+    }.build()
+}
+
+```
+
 
 if you want to test for candidate. (UAT)
 
@@ -160,6 +176,12 @@ public final class MxSDK {
         public @NonNull Builder candidate(boolean candidate);
 
         /**
+         * @param listener, if error occur, onMxSDKError() will be called with error code.
+         * @return this
+         */
+        public @NonNull Builder errorListener(OnMxSDKErrorListener listener);
+
+        /**
          * call this to finish initialize MxSDK.
          */
         public void build();
@@ -196,6 +218,15 @@ public final class MxSDK {
          */
         public void play(@NonNull Activity context);
     }
+
+    public @interface ErrorCode {
+        int ErrorTokenExpired = 100;
+        int ErrorTokenAuthIssue = 101;
+        int ErrorPartnerIdIsNull = 102;
+        int ErrorContentNotAvailable = 300;
+        int ErrorNetworkIssue = 301;
+        int ErrorInternalServerIssue = 302;
+    }
 }
 
 
@@ -203,6 +234,12 @@ public final class MxSDK {
 ```
 
 ## Release Note
+
+### 0.5.0.0-SNAPSHOT
+
+FEATURE:
+
+* introduce OnMxSDKErrorListener for error handle 
 
 ### 0.4.0.0-SNAPSHOT
 
