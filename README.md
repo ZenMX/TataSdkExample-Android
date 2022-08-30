@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.6.0.5-SNAPSHOT`
+latest version `0.6.1.7-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.6.0.5-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.6.1.7-SNAPSHOT'
 
 ```
 
@@ -234,6 +234,14 @@ public final class MxSDK {
 ```
 
 ## Release Note
+
+### 0.6.1.7-SNAPSHOT
+
+FIX:
+
+* add x-timestamp on API request
+
+* fix issue of disable subtitle
 
 ### 0.6.0.5-SNAPSHOT
 
