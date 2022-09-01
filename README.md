@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.6.2.10-SNAPSHOT`
+latest version `0.6.3.12-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.6.2.10-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.6.3.12-SNAPSHOT'
 
 ```
 
@@ -234,6 +234,12 @@ public final class MxSDK {
 ```
 
 ## Release Note
+
+### 0.6.3.12-SNAPSHOT
+
+FIX:
+
+* continue watching issue, player should start with position where it left
 
 ### 0.6.2.10-SNAPSHOT
 
