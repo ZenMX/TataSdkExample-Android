@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.6.3.12-SNAPSHOT`
+latest version `0.6.4.14-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.6.3.12-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.6.4.14-SNAPSHOT'
 
 ```
 
@@ -234,6 +234,13 @@ public final class MxSDK {
 ```
 
 ## Release Note
+
+### 0.6.4.14-SNAPSHOT
+
+FIX:
+
+* Player control lock on player screen gets auto unlocked for next episode
+
 
 ### 0.6.3.12-SNAPSHOT
 
