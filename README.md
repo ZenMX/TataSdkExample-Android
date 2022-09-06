@@ -1,6 +1,6 @@
 # How to integrate mx-tata-sdk-android
 
-latest version `0.6.4.14-SNAPSHOT`
+latest version `0.6.4.15-SNAPSHOT`
 
 ## add maven repository
 
@@ -44,7 +44,7 @@ allprojects {
 
 ```gradle 
 
-implementation 'com.m.x.tata.sdk:player:0.6.4.14-SNAPSHOT'
+implementation 'com.m.x.tata.sdk:player:0.6.4.15-SNAPSHOT'
 
 ```
 
@@ -234,6 +234,12 @@ public final class MxSDK {
 ```
 
 ## Release Note
+
+### 0.6.4.15-SNAPSHOT
+
+FIX:
+
+* Disable screen shot & record when playback
 
 ### 0.6.4.14-SNAPSHOT
 
